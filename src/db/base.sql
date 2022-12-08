@@ -52,3 +52,15 @@ INSERT INTO `products` (`id`, `name`, `price`, `stock`, `image`) VALUES
 (5, 'AirPods Lite', '70', 35, 'product-5.jpg'),
 (6, 'Televisor Plano', '250', 5, 'product-6.jpg'),
 (32, 'Samsung Galaxy A51', '300', 12, '780980.jpg');
+
+-- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `transactions`
+--
+CREATE TABLE `transactions` (
+  `id` int(11) NOT NULL,
+  `transaction_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
