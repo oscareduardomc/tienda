@@ -30,3 +30,24 @@ if (isset($_POST['add_to_cart'])) {
         }
     }
 };
+
+if (isset($_POST['update_cart'])) {
+    $update_quantity = $_POST['cart_quantity'];
+    $update_id = $_POST['cart_id'];
+    $product_id = $_POST['product_id'];
+    $product_stock = $_POST['product_stock'];
+
+    mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_quantity' WHERE id = '$update_id'") or die('query failed');
+    $update_stock = mysqli_query($conn, "UPDATE `products` SET stock = $product_stock - $update_quantity WHERE id = '$product_id'") or die('query failed');
+    $message[] = 'cart quantity updated successfully!';
+}
+
+if (isset($_POST['remove'])) {
+    $remove_id = $_POST['cart_id'];
+    $product_id = $_POST['product_id'];
+    $product_stock = $_POST['product_stock'];
+
+    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'") or die('query failed');
+    $update_stock = mysqli_query($conn, "UPDATE `products` SET stock = $product_stock WHERE id = '$product_id'") or die('query failed');
+    $message[] = 'cart item removed successfully!';
+}
