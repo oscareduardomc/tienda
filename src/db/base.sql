@@ -6,7 +6,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `cart`
 --
@@ -29,3 +28,27 @@ CREATE TABLE `cart` (
 INSERT INTO `cart` (`id`, `user_id`, `product_id`, `name`, `price`, `image`, `quantity`, `stock_bUpdate`) VALUES
 (15, 1, 5, 'AirPods Lite', '70', 'product-5.jpg', 10, 45),
 (20, 1, 4, 'Echo Dot 4', '49.99', 'product-4.jpg', 4, 13);
+
+-- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `products`
+--
+CREATE TABLE `products` (
+  `id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Insert de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `stock`, `image`) VALUES
+(2, 'Apple Watch', '499', 18, '572149.jpg'),
+(3, 'Cámara Nikon', '1500', 9, 'product-3.jpg'),
+(4, 'Echo Dot 4', '49.99', 9, 'product-4.jpg'),
+(5, 'AirPods Lite', '70', 35, 'product-5.jpg'),
+(6, 'Televisor Plano', '250', 5, 'product-6.jpg'),
+(32, 'Samsung Galaxy A51', '300', 12, '780980.jpg');
