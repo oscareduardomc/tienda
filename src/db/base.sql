@@ -85,3 +85,29 @@ INSERT INTO `user_info` (`id`, `name`, `email`, `password`, `rol`) VALUES
 (2, 'Oscar Martinez', 'oscar@mail.com', 'e10adc3949ba59abbe56e057f20f883e', 'user'),
 (3, 'Julio Caballero', 'julio@mail.com', 'e10adc3949ba59abbe56e057f20f883e', 'admin');
 
+--
+-- Índices para tablas volcadas
+--
+--
+-- Indices de la tabla `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `user_info`
+--
+ALTER TABLE `user_info`
+  ADD PRIMARY KEY (`id`);
