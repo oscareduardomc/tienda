@@ -64,3 +64,24 @@ CREATE TABLE `transactions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `user_info`
+--
+
+CREATE TABLE `user_info` (
+  `id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `rol` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Insert de datos para la tabla `user_info`
+--
+
+INSERT INTO `user_info` (`id`, `name`, `email`, `password`, `rol`) VALUES
+(1, 'Daniel Castellanos', 'daniel@mail.com', 'e10adc3949ba59abbe56e057f20f883e', 'user'),
+(2, 'Oscar Martinez', 'oscar@mail.com', 'e10adc3949ba59abbe56e057f20f883e', 'user'),
+(3, 'Julio Caballero', 'julio@mail.com', 'e10adc3949ba59abbe56e057f20f883e', 'admin');
+
