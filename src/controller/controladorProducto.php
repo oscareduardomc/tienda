@@ -13,3 +13,4 @@ if (isset($_POST['add_to_cart'])) {
     $product_quantity = $_POST['product_quantity'];
     $product_stock = $_POST['product_stock'];
     $product_id = $_POST['product_id'];
+    
