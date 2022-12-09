@@ -3,7 +3,7 @@
 require_once '../db/conexion.php';
 require_once '../db/config.php';
 
-include '../../src/controller/controladorAdmin.php';
+include '../../src/controller/controladorEditar.php';
 ?>
 
 <?php include("../views/header.php") ?>

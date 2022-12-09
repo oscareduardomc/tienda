@@ -4,7 +4,7 @@ error_reporting(~E_NOTICE); // avoid notice
 
 require_once '..\db\conexion.php';
 
-include '../controller/controladorAdmin.php';
+include '../controller/controladorAgregar.php';
 ?>
 
 <?php include("../views/header.php") ?>

@@ -5,7 +5,7 @@ session_start();
 error_reporting(0);
 $user_id = $_SESSION['user_id'];
 
-include '../controller/controladorAdmin.php';
+include '../controller/controladorAgregar.php';
 ?>
 
 <?php include("header.php") ?>
